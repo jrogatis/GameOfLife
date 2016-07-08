@@ -1,0 +1,94 @@
+/* CSS Document */
+// JavaScript Document
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300,400italic,300italic,700italic);
+
+@import 'https://fonts.googleapis.com/css?family=PT+Sans+Narrow';
+
+html{
+	
+	
+}
+
+
+
+body {
+	font-family: Roboto, sans-serif;
+	background-color:  hsla(189,16%,76%,1.00);
+	
+	row {
+		
+		row#mountNode {
+			
+				div#tableBox {
+			
+					background-image: linear-gradient(to bottom,#e8e8e8 0,black 100%);
+					margin-top: 2%;
+					padding-top: 10px;
+					
+					div#Header {
+							margin-bottom: 5px;
+							h1#Title {
+								text-align: center;
+								margin: 0px;
+								//padding: 0px;
+								
+								}
+						
+							form {
+									
+								div {
+									font-size: 25px;
+									div{
+										input {
+											font-size: 25px;
+										}
+									}
+								}
+								
+							}
+					}
+					
+					table.table { 
+						background-color: black;
+						border: 5px outset lightgray!important;
+						-webkit-box-shadow: 5px 5px hsla(0,0%,23%,1.00);
+						box-shadow: 5px 5px hsla(0,0%,23%,1.00);
+						
+						tbody {
+							
+							
+							tr{
+									 height: 13px !important;  
+
+								td{
+									color: black;
+									text-align: center;
+									border: 0.2px solid hsla(0,0%,22%,1.00)  !important;
+									font-size: 6px;
+									width: 13px !important;
+									padding: 0px;
+								}
+							}
+						}
+
+					}
+				}
+		}
+	}
+	
+	
+		
+}
+	
+	
+	
+
+	
+			
+
+	
+
+
+
+
+
