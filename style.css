@@ -1,33 +1,15 @@
 /* CSS Document */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300,400italic,300italic,700italic);
-@import "https://fonts.googleapis.com/css?family=PT+Sans+Narrow";
-body {
-  font-family: Roboto, sans-serif;
-  background-color: #b8c9cc; }
-  body row row#mountNode div#tableBox {
-    background-image: linear-gradient(to bottom, #e8e8e8 0, black 100%);
-    margin-top: 2%;
-    padding-top: 10px; }
-    body row row#mountNode div#tableBox div#Header {
-      margin-bottom: 5px; }
-      body row row#mountNode div#tableBox div#Header h1#Title {
-        text-align: center;
-        margin: 0px; }
-      body row row#mountNode div#tableBox div#Header form div {
-        font-size: 25px; }
-        body row row#mountNode div#tableBox div#Header form div div input {
-          font-size: 25px; }
-    body row row#mountNode div#tableBox table.table {
-      background-color: black;
-      border: 5px outset lightgray !important;
-      -webkit-box-shadow: 5px 5px #3b3b3b;
-      box-shadow: 5px 5px #3b3b3b; }
-      body row row#mountNode div#tableBox table.table tbody tr {
-        height: 13px !important; }
-        body row row#mountNode div#tableBox table.table tbody tr td {
-          color: black;
-          text-align: center;
-          border: 0.2px solid #383838 !important;
-          font-size: 6px;
-          width: 13px !important;
-          padding: 0px; }
+body { font-family: Roboto, sans-serif; background: radial-gradient(darkred 25%, black 95%); }
+body row row#mountNode div#tableBox { background: linear-gradient(to bottom, #e8e8e8 0, black 100%); margin-top: 2%; padding-top: 10px; }
+body row row#mountNode div#tableBox div#Header { margin-bottom: 5px; }
+body row row#mountNode div#tableBox div#Header h1#Title { text-align: center; margin: 0px; }
+body row row#mountNode div#tableBox div#Header form div label { text-align: right; font-size: 25px; margin-right: -25px; }
+body row row#mountNode div#tableBox div#Header form div div input { color: red; background-color: black; font-size: 30px; height: 44px; text-align: center; font-family: 'Segment7Standard'; }
+body row row#mountNode div#tableBox table.table { background-color: black; border: 5px outset lightgray !important; -webkit-box-shadow: 5px 5px #3b3b3b; box-shadow: 5px 5px #3b3b3b; }
+body row row#mountNode div#tableBox table.table tbody tr { height: 13px !important; }
+body row row#mountNode div#tableBox table.table tbody tr td { color: transparent; text-align: center; border: 0.2px solid #383838 !important; font-size: 10px; width: 13px !important; padding: 0px; }
+body row row#mountNode div#tableBox table.table tbody tr td.liveAge1 { background-color: #FFBDBA; }
+body row row#mountNode div#tableBox table.table tbody tr td.liveAge2 { background-color: #F54D41; }
+body row row#mountNode div#tableBox table.table tbody tr td.liveAge3 { background-color: red; }
+body row row#mountNode div#tableBox table.table tbody tr td.notLive { background-color: black; }

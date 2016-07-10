@@ -2,26 +2,21 @@
 // JavaScript Document
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300,400italic,300italic,700italic);
 
-@import 'https://fonts.googleapis.com/css?family=PT+Sans+Narrow';
 
-html{
-	
-	
-}
 
 
 
 body {
 	font-family: Roboto, sans-serif;
-	background-color:  hsla(189,16%,76%,1.00);
-	
+	//background-color:  hsla(189,16%,76%,1.00);
+	 background: radial-gradient(darkred 25%, black 95%);
 	row {
 		
 		row#mountNode {
 			
 				div#tableBox {
 			
-					background-image: linear-gradient(to bottom,#e8e8e8 0,black 100%);
+					background: linear-gradient(to bottom,#e8e8e8 0,black 100%);
 					margin-top: 2%;
 					padding-top: 10px;
 					
@@ -37,10 +32,22 @@ body {
 							form {
 									
 								div {
-									font-size: 25px;
+									label{
+										text-align: right;
+										font-size: 25px;
+										margin-right: -25px
+										}
+									
 									div{
 										input {
-											font-size: 25px;
+											color: red;
+											background-color: black;
+											font-size: 30px;
+											 height: 44px;
+											text-align: center;
+											font-family: 'Segment7Standard';
+										
+												 
 										}
 									}
 								}
@@ -49,7 +56,7 @@ body {
 					}
 					
 					table.table { 
-						background-color: black;
+						background-color: hsla(0,0,0,1.00);
 						border: 5px outset lightgray!important;
 						-webkit-box-shadow: 5px 5px hsla(0,0%,23%,1.00);
 						box-shadow: 5px 5px hsla(0,0%,23%,1.00);
@@ -61,13 +68,32 @@ body {
 									 height: 13px !important;  
 
 								td{
-									color: black;
+									color: transparent;
 									text-align: center;
 									border: 0.2px solid hsla(0,0%,22%,1.00)  !important;
-									font-size: 6px;
+									font-size: 10px;
 									width: 13px !important;
 									padding: 0px;
+									
+									
 								}
+								
+								td.liveAge1 {
+										
+										background-color: #FFBDBA;
+									}
+								td.liveAge2 {
+										
+										background-color: #F54D41;
+									}
+								td.liveAge3 {
+										
+										background-color: red;
+									}
+								td.notLive {
+										
+										background-color: black;
+									}
 							}
 						}
 
