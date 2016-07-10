@@ -24,7 +24,26 @@ const {
 	
 } = ReactBootstrap;
 
-
+var clearGameArray = function (row,col) {
+	 'use strict';
+	var gameBoard = [];
+	
+	
+	for (var i = 0; i < row; i++) {
+		var arrLine = [];
+			
+		for (var z = 0; z < col; z++) {
+		
+			arrLine.push(0);			
+		}
+	
+		gameBoard.push(arrLine);
+	
+	}	
+	
+	return (gameBoard);	
+	
+};
 
 var inicialGameArray = function (row,col) {
 	 'use strict';
@@ -253,7 +272,11 @@ var Header = React.createClass ({
 									onClick={this.props.handleStopClick}>
 										Pause
 								</Button></ButtonGroup>
-								<ButtonGroup><Button bsSize="large">Clear</Button>	</ButtonGroup>
+								<ButtonGroup><Button 
+									onClick= {this.props.handleClear}
+									bsSize="large">
+										Clear
+								</Button>	</ButtonGroup>
 							</ButtonGroup>
 						</Col>
 						<Col componentClass={ControlLabel} sm={3}>
@@ -401,7 +424,7 @@ var Controler = React.createClass ({
 	},
 	
 	nextGen: function() {
-		
+		console.log("no next Gen " + this.state.gameBoard);
 		//create a board to be next same quant of rows of actual
 		var boardNext = new Array(this.state.gameBoard.length);
 		// for each row 
@@ -491,9 +514,17 @@ var Controler = React.createClass ({
 	},
 	
 	handleClear: function() {
+		clearInterval(this.state.interv);
+		var actualNumRows = this.state.gameBoard.length;
+		var actualNumCells = this.state.gameBoard[0].length;
+		this.setState({
+			run : false,
+			pause: true,
+			gameScore:0,
+			gameBoard: clearGameArray(actualNumRows,actualNumCells)
+		})
 		
-		
-	};
+	},
 	
 	handleSpeed: function(speedToSet){
 		console.log(speedToSet);
@@ -556,18 +587,16 @@ var Controler = React.createClass ({
 	
 	handleClickOnCell: function (row,col){
 		
-		var newBoard = this.state.gameBoard
+		 var newBoard = this.state.gameBoard
 			newBoard[col][row] = "1";
-	
-		//(newBoard[col][row]);
-		
-			
+			//console.log("old " + JSON.stringify(this.state.gameBoard) + "");
+			//console.log("new " + JSON.stringify(newBoard));
 			this.setState ({
 				
 				gameBoard:newBoard
 			})
 			
-			
+				//console.log("after " + JSON.stringify(this.state.gameBoard));
 	},
 	
 	render: function (){
@@ -581,6 +610,7 @@ var Controler = React.createClass ({
 					handleStopClick={this.handleStopClick}
 					runState={this.state.run} 
 					pauseState={this.state.pause} 
+					handleClear={this.handleClear}
 				/> 
 				<GameTable 
 					gameBoard = {this.state.gameBoard}
